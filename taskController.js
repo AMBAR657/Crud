@@ -25,7 +25,8 @@ class TaskController {
         try {
             const tasks = await TaskService.getAllTasks();
             res.json(tasks);
-        } catch (error) {
+        } catch (error) 
+        //Nos manda si no se pudo obtener la tarea y nos manda error 
             res.status(500).json({ error: "Error al obtener las tareas" });
         }
     }
