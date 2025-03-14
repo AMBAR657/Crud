@@ -65,6 +65,7 @@ class TaskController {
         try {
             const deletedTask = await TaskService.deleteTask(req.params.id);
             if (!deletedTask) {
+                //Nos manda si las tareas son encontradas correctamente 
                 return res.status(404).json({ error: "Tarea no encontrada" });
             }
             res.json({ message: 'Tarea eliminada' });
