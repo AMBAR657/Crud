@@ -7,6 +7,7 @@ const connectDB = async () => {
         //Manda el mensaje si la conexion a la base de datos fue correcta
         console.log('Conexión exitosa a la base de datos');
     } catch (error) {
+        //Si la conexion no fue exitosa te va a mandar el siguente mensaje
         console.error('Error al conectar a la base de datos:', error.message);
         process.exit(1);
     }
